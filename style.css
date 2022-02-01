@@ -1,29 +1,50 @@
 #app {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  display: grid;
   height: 600px;
   width: 800px;
   font-size: 3em;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "header header header header header header"
+  "nav article-1 article-1 article-1 ad-area ad-area"
+  "nav article-1 article-1 article-1 ad-area ad-area"
+  "nav article-2 article-2 article-2 ad-area ad-area"
+  "nav article-2 article-2 article-2 ad-area ad-area"
+  "footer footer footer footer footer footer" 
+  ;
 }
 
 #header {
+  grid-area: header;
   background-color: red;
 }
 
 #footer {
+  grid-area: footer;
   background-color: indigo;
 }
 
 #article-1 {
+  grid-area: article-1;
   background-color: yellow;
 }
 
 #article-2 {
+  grid-area: article-2;
   background-color: green;
 }
 
 #nav {
+  grid-area: nav;
   background-color: orange;
 }
 
 #ad-area {
+  grid-area: ad-area;
   background-color: blue;
 }
+
